@@ -1,0 +1,26 @@
+{
+  "env_name": "gridworld",
+  "env_config": {},
+  "agent_type": "dqn",
+  "agent_config": {
+    "learning_rate": 0.001,
+    "gamma": 0.95,
+    "epsilon": 0.2,
+    "epsilon_decay": 0.995,
+    "epsilon_min": 0.01,
+    "buffer_size": 50000,
+    "batch_size": 32,
+    "target_update_freq": 50,
+    "device": "cpu"
+  },
+  "total_timesteps": 50000,
+  "eval_freq": 5000,
+  "save_freq": 25000,
+  "log_freq": 500,
+  "n_eval_episodes": 5,
+  "log_dir": "logs",
+  "use_wandb": false,
+  "use_tensorboard": true,
+  "project_name": "gridworld_dqn",
+  "device": "cpu"
+}

@@ -1,0 +1,33 @@
+# Default training configuration
+env_name: "rlhf"
+env_config: {}
+
+agent_type: "ppo"
+agent_config:
+  learning_rate: 0.0003
+  gamma: 0.99
+  epsilon: 0.1
+  epsilon_decay: 0.995
+  epsilon_min: 0.01
+  buffer_size: 100000
+  batch_size: 64
+  target_update_freq: 100
+  device: "cpu"
+
+# Training settings
+total_timesteps: 100000
+eval_freq: 10000
+save_freq: 50000
+log_freq: 1000
+
+# Evaluation settings
+n_eval_episodes: 10
+
+# Logging settings
+log_dir: "logs"
+use_wandb: false
+use_tensorboard: true
+project_name: "rlhf_project"
+
+# Device settings
+device: "cpu"
